@@ -10,6 +10,11 @@ let csdl = client.db('quanlynhanvien')
 
 let dieukiencantim = {}
 
+router.get('/', function (req, res, next) {
+  dieukiencantim = {}
+  res.redirect('/1')
+});
+
 function HienThi(req, res) {
   let tranghientai = req.params.page || 1
   let soluong = 3
@@ -40,9 +45,6 @@ router.post('/tim', function (req, res, next) {
 router.get('/:page', function (req, res, next) {
   HienThi(req, res)
 });
-router.get('/', function (req, res, next) {
-  dieukiencantim = {}
-  res.redirect('/1')
-});
+
 
 module.exports = router;
