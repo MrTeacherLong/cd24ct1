@@ -1,0 +1,16 @@
+<%- include ('header.ejs') %>
+
+
+  <form action="/them" method="post" enctype="multipart/form-data" >
+
+    <label class="form-label">Tên nhân viên </label>
+    <input type="text" name="txtTen" class="form-control">
+    <label class="form-label">Tuổi nhân viên </label>
+    <input type="number" name="txtTuoi" class="form-control"> <br>
+
+    <input type="file" name="myFile" class="form-control" /> <br>
+
+    <button class="btn btn-primary container-fluid">Thêm</button>
+  </form>
+
+<%- include ('footer.ejs') %>

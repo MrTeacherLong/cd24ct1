@@ -1,0 +1,24 @@
+<%- include ('header.ejs') %>
+
+<form action="/sua" method="post" enctype="multipart/form-data">
+  <label class="form-label">
+    Tên nv đã có
+  </label>
+  <input type="hidden" name="txtMaso" value="<%= nv._id %>">
+
+  <input type="text" name="txtTen" 
+      value="<%= nv.ten %>" class="form-control"> 
+  <label class="form-label">
+    Tuổi mới nv 
+  </label>
+  <input type="number" name="txtTuoi" 
+     value="<%= nv.tuoi %>" class="form-control"> <br>
+
+  <img src="/hinhanh/<%= nv.hinh %>" alt="" width="100px"> <br>
+
+  <input type="file" name="myFile" class="form-control" /> <br>
+
+  <button class="btn btn-warning container-fluid">Lưu</button>
+</form>
+
+<%- include ('footer.ejs') %>
